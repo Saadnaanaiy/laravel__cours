@@ -8,7 +8,7 @@ return new class extends Migration {
 
 
     public function up(): void {
-        
+
         Schema::create('ventes', function (Blueprint $table) {
             //idvente int primary key
             $table->id('idvente');
@@ -17,7 +17,7 @@ return new class extends Migration {
             //idproduit int
             $table->bigInteger("idproduit")->unsigned();
             //constraint foreign key(idclient) references client(idclient)
-            $table->foreign('idclient')->references('idclient')->on('clients'); //#idcient
+            $table->foreign(columns: 'idclient')->references('idclient')->on('clients')->onDelete("cascade"); //#idcient
             //constraint foreign key(idproduit) references produit(idproduit)
             $table->foreign('idproduit')->references('idproduit')->on('produits'); //#idproduit
             $table->integer('quantite');

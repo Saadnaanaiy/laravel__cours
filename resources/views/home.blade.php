@@ -17,6 +17,7 @@
             <a href="{{ route('produits.list') }}" class="btn">🛍️ Produits</a>
             <a href="{{ route('ventes.list') }}" class="btn">💰 Ventes</a>
             <a href="{{ route('clients.list') }}" class="btn">👤 Clients</a>
+            <a href="{{ route('ajouterClient.list') }}" class="btn">👤 ajouter Clients</a>
         </div>
     </div>
 
